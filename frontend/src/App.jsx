@@ -2,8 +2,8 @@ import React from 'react'
 import Login from './components/Login'
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
-import './app.css'
-import Signup from './components/Signup'
+import './App.css'
+import Register from './components/Register'
 import Homepage from './components/Homepage'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
