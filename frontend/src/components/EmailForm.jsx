@@ -122,7 +122,7 @@ const EmailForm = ({ onSendSuccess }) => {
               id="recipients"
               name="recipients"
               rows={3}
-              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-4"
               placeholder="Enter recipient emails separated by commas (e.g., recipient1@example.com, recipient2@example.com)"
               value={formData.recipients}
               onChange={handleChange}
@@ -142,7 +142,7 @@ const EmailForm = ({ onSendSuccess }) => {
               type="text"
               id="subject"
               name="subject"
-              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-3"
               placeholder="Email subject"
               value={formData.subject}
               onChange={handleChange}
@@ -159,7 +159,7 @@ const EmailForm = ({ onSendSuccess }) => {
               id="body"
               name="body"
               rows={8}
-              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md"
+              className="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md p-4"
               placeholder="Compose your email message here (HTML formatting is supported)"
               value={formData.body}
               onChange={handleChange}
@@ -174,7 +174,7 @@ const EmailForm = ({ onSendSuccess }) => {
           <button
             type="submit"
             disabled={loading}
-            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 cursor-pointer${
               loading ? 'opacity-70 cursor-not-allowed' : ''
             }`}
           >

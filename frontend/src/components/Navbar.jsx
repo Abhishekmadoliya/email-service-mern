@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-xl font-bold text-blue-600">
+              <Link to="/" className="text-xl font-bold text-blue-600 hover:cursor-pointer">
                 Email Service
               </Link>
             </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer"
                 >
                   Dashboard
                 </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     </span>
                     <button
                       onClick={handleLogout}
-                      className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600"
+                      className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-red-600 cursor-pointer"
                     >
                       Logout
                     </button>
@@ -52,13 +52,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-blue-600 cursor-pointer"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 cursor-pointer"
                 >
                   Register
                 </Link>
