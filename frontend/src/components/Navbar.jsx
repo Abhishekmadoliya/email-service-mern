@@ -13,12 +13,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-14 sm:h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-xl font-bold text-blue-600 hover:cursor-pointer">
+              <Link to="/" className="text-lg sm:text-xl font-bold text-blue-600 hover:cursor-pointer">
                 Email Service
               </Link>
             </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
           <div className="flex items-center sm:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -114,10 +114,15 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden">
-          <div className="pt-2 pb-3 space-y-1">
+        <div className="sm:hidden absolute w-full bg-white shadow-lg z-50">
+          <div className="pt-2 pb-3 space-y-1 px-2">
             {isAuthenticated ? (
               <>
+                {user && (
+                  <div className="px-3 py-2 text-sm font-medium text-gray-600">
+                    Signed in as: <span className="font-semibold">{user?.name || user?.email}</span>
+                  </div>
+                )}
                 <Link
                   to="/dashboard"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100"
@@ -146,10 +151,17 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/register"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+                  className="block px-3 py-2 mb-1 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Register
+                </Link>
+                <Link
+                  to="/register"
+                  className="block px-3 py-2 mx-2 mb-2 text-center rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Sign Up Free
                 </Link>
               </>
             )}
